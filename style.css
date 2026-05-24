@@ -1,0 +1,199 @@
+/* Portfolio stylesheet for Boipelo Motileng */
+
+:root {
+  --bg-start: #081c3c;
+  --bg-end: #0c335d;
+  --panel: rgba(255, 255, 255, 0.08);
+  --panel-strong: rgba(255, 255, 255, 0.12);
+  --text: #eef4ff;
+  --text-secondary: #c9d7f5;
+  --accent: #56c3ff;
+  --accent-strong: #8bd7ff;
+  --border: rgba(255, 255, 255, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%);
+  line-height: 1.6;
+}
+
+body > a {
+  display: inline-block;
+  margin: 18px 12px 0;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+body > a:hover {
+  background: rgba(86, 195, 255, 0.18);
+  transform: translateY(-1px);
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto 60px;
+  padding: 0 22px 40px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.6rem, 4vw, 4rem);
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-top: 1.6rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin: 1.2rem 0 0.45rem;
+}
+
+p,
+ul {
+  max-width: 780px;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+ul {
+  padding-left: 1.3rem;
+  color: var(--text-secondary);
+}
+
+li {
+  margin-bottom: 0.45rem;
+}
+
+img {
+  display: block;
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  margin: 20px 0 28px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.14);
+  margin: 32px 0;
+}
+
+form {
+  display: grid;
+  gap: 14px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 22px;
+  border-radius: 22px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  align-self: start;
+  width: fit-content;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: #092147;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(86, 195, 255, 0.2);
+}
+
+footer,
+section {
+  padding-bottom: 14px;
+}
+
+footer p,
+footer a {
+  color: var(--text-secondary);
+}
+
+footer a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: var(--accent-strong);
+}
+
+@media (min-width: 768px) {
+  main {
+    padding: 0 0 50px;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2.5fr) minmax(0, 1fr);
+    gap: 36px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 660px) {
+  body {
+    font-size: 0.98rem;
+  }
+
+  body > a {
+    margin-top: 12px;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+
+  hr {
+    margin: 24px 0;
+  }
+}
